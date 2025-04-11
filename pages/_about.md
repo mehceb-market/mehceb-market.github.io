@@ -7,4 +7,4 @@
 
 ## Sektör
 
-Market, manav ve şarküteri sektörlerinde değer katmaya devam ediyoruz.
+MEHCEB Market olarak; manav, şarküteri ve kuruyemiş sektörlerinde değer katmaya devam ediyoruz.
