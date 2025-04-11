@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="MEHCEB Market" />
+  <meta name="description" content="MEHCEB Market" />
+  <meta name="keywords" content="mehceb, market, bakkal, şarküteri, MEHCEB market, mehceb bakkal, mehceb şarküteri, gaziantep market, gaziantep bakkal, gaziantep şarküteri" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>MEHCEB Market</title>
+
+  <link rel="shortcut icon" href="https://raw.githubusercontent.com/mehceb-market/mehceb-market.github.io/master/favicon.ico" />
+
+  <link rel="stylesheet" type="text/css" href="https://mehceb-market.github.io/assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://mehceb-market.github.io/assets/css/font-awesome.min.css" />
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+
+  <script src="https://mehceb-market.github.io/assets/js/html5shiv.min.js"></script>
+  <script src="https://mehceb-market.github.io/assets/js/respond.min.js"></script>
+
+  <![endif]-->
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="https://mehceb-market.github.io/assets/js/bootstrap.min.js"></script>
+
+  <!-- Google Analytics start -->
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-160374541-1']);
+
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  </script>
+  <!-- Google Analytics end -->
+
+  <!-- whatsapp start -->
+  <!-- source : http://github.com/gdemir/whatsapp -->
+  <link rel="stylesheet" type="text/css" href="https://mehceb-market.github.io/assets/css/whatsapp.min.css" />
+  <!-- whatsapp end -->
+
+  <!-- Highlightjs start -->
+  <!-- source: http://highlightjs.org -->
+  <link rel="stylesheet" type="text/css" href="https://mehceb-market.github.io/assets/css/highlight.pack.css" />
+  <script src="https://mehceb-market.github.io/assets/js/highlight.pack.js"></script>
+  <script type="text/javascript">
+  hljs.initHighlightingOnLoad();
+  </script>
+  <!-- Highlightjs end -->
+
+  <!-- Animatecss start -->
+  <!-- source: https://daneden.github.io/animate.css/ -->
+  <link rel="stylesheet" type="text/css" href="https://mehceb-market.github.io/assets/css/animate.min.css" />
+  <!-- Animatecss end -->
+
+  <!-- Github-markdown-css start -->
+  <!-- source: https://github.com/sindresorhus/github-markdown-css -->
+  <link rel="stylesheet" type="text/css" href="https://mehceb-market.github.io/assets/css/github-markdown.css" />
+  <style>
+  .markdown-body {
+    box-sizing: border-box;
+    min-width: 200px;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 45px;
+  }
+
+  @media (max-width: 767px) {
+    .markdown-body {
+      padding: 15px;
+    }
+  }
+  </style>
+  <!-- Github-markdown-css end -->
+
+  <!-- Showdownjs start -->
+  <!-- source: https://github.com/showdownjs/showdown -->
+  <script src="https://mehceb-market.github.io/assets/js/showdown.min.js"></script>
+  <!-- Showdownjs end -->
+
+  <script type="text/javascript">
+
+  $(document).ready(function() {
+
+    function get_markdown(URL) {
+      $.ajax({
+        url: URL,
+        type: 'get',
+        dataType: 'html',
+        async: false,
+        success: function(data) { RESULT = data; }
+      });
+      return RESULT;
+    }
+
+    $('.page').click(function() {
+      var PAGE = $(this).attr('id');
+      var MARKDOWN = get_markdown("https://raw.githubusercontent.com/mehceb-market/mehceb-market.github.io/master/pages/_" + PAGE );
+      var converter = new showdown.Converter();
+      var HTML = converter.makeHtml(MARKDOWN);
+
+      var PAGETEXT = $(this).text();
+      $("#readme").html(HTML);
+
+
+      $('pre code').each(function(i, e) { hljs.highlightBlock(e) });
+
+    });
+
+  });
+  </script>
+
+  <style type="text/css">
+
+  @import  url('https://fonts.googleapis.com/css?family=Nunito:300,400,600');
+  body { font-family: 'Nunito', sans-serif; background-color: #fdfdfd; }
+  code { color: #c7254e; }
+
+  #readme { color: #333; }
+  #readme h1 {
+    color: #d3d3d3;
+    font-size: 2.5em;
+    font-weight: 700;
+    height: 130px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    text-align: center;
+    margin: 0em;
+    vertical-align: center;
+    padding-top: 33px;
+  }
+
+  #readme h4 { border-bottom: 1px solid #e1e4e8; padding-bottom: 1em; }
+  #readme h5 { border-radius: 8px; border: 2px dotted #424242; padding: 1em; }
+
+  .mehceb-market_color_1 { color: #01a04c; }
+  .mehceb-market_color_2 { color: #f8df13; }
+
+  .mehceb-market_bgcolor_1 { background-color: #01a04c; }
+  .mehceb-market_bgcolor_2 { background-color: #f8df13; }
+
+  </style>
+
+</head>
+<body style="background-color:#eee">
+
+  <!-- Navbar start -->
+
+  <style type="text/css">
+  /* NAVBAR */
+  .navbar-inverse .navbar-nav > li > a {
+    color: white;
+  }
+  .navbar-inverse {
+    width: 100%;
+    background-image: linear-gradient(to bottom, #01a04c 0, #01a04c 100%);
+  }
+  .navbar {
+    border-radius: 0px !important;
+    margin-bottom: 0px;
+  }
+  </style>
+
+  <nav class="navbar navbar-inverse navbar-static-top" data-spy="affix" data-offset-top="197">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" style="margin-top: 25px;">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="nabar-brand hidden-xs" href="https://mehceb-market.github.io" style="padding: 0px 10px 10px 10px;">
+          <img alt="Brand" src="https://mehceb-market.github.io/assets/img/default-side.png" style="height:40px; padding-left:10px" class="img-responsive"/>
+        </a>
+        <a class="nabar-brand visible-xs" href="https://mehceb-market.github.io" style="padding: 15px 0px 15px 15px;">
+          <img alt="Brand" src="https://mehceb-market.github.io/assets/img/default.png" style="height:60px; padding-left:5px" class="img-responsive"/>
+        </a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right" style="padding: 15px 25px 0px 0px; font-size:16px; font-weight:bold;">
+          <li><a class="page" id="about.md">Hakkımızda</a></li>
+        </ul>
+
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  <!-- Navbar end -->
+
+  <div id="readme">
+
+    <!-- Slide start -->
+    <style type="text/css">
+    .background-transparent {
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+    }
+    </style>
+
+    <div id="carousel-example-generic1" class="carousel slide" data-ride="carousel" style="color:white; font-size:14px;">
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+
+        <div class="item active" style="background-position:center;min-height:850px;max-height:850px;background-image:url(https://raw.githubusercontent.com/mehceb-market/mehceb-market.github.io/master/assets/img/slide_1.jpg);">
+          <div class="carousel-caption" style="bottom:0px;left:0px;right:0px; margin-bottom:-40px;">
+            <div class="background-transparent" style="min-height:80px;">
+              <h3 class="animated bounceInDown">MEHCEB Market Market</h3>
+              <h4 class="hidden-sm hidden-xs animated bounceInUp">Ev Market İhtiyacınızı, Evinize Kadar Getirelim!</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="item" style="background-position:center;min-height:850px;max-height:850px;background-image:url(https://raw.githubusercontent.com/mehceb-market/mehceb-market.github.io/master/assets/img/slide_2.jpg);">
+          <div class="carousel-caption" style="bottom:0px;left:0px;right:0px; margin-bottom:-40px;">
+            <div class="background-transparent" style="min-height:80px;">
+              <h3 class="animated bounceInDown">MEHCEB Market Manav</h3>
+              <h4 class="hidden-sm hidden-xs animated bounceInUp">Ev Manav İhtiyacınızı, Evinize Kadar Getirelim!</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="item" style="background-position:center;min-height:850px;max-height:850px;background-image:url(https://raw.githubusercontent.com/mehceb-market/mehceb-market.github.io/master/assets/img/slide_3.jpg);">
+          <div class="carousel-caption" style="bottom:0px;left:0px;right:0px; margin-bottom:-40px;">
+            <div class="background-transparent" style="min-height:80px;">
+              <h3 class="animated bounceInDown">MEHCEB Market Şarküteri</h3>
+              <h4 class="hidden-sm hidden-xs animated bounceInUp">Ev Şarküteri İhtiyacınızı, Evinize Kadar Getirelim!</h4>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- Controls -->
+      <a class="left carousel-control" href="#carousel-example-generic1" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic1" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+
+    </div>
+    <!-- Slide end -->
+
+    <!-- Contact start -->
+    <div class="container-fluid mehceb-market_bgcolor_2" style="padding:2em; color:white; font-size:20px;">
+      İletişim
+    </div>
+    <div class="container-fluid">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3185.777999794396!2d37.3259445!3d37.0150922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1531df4a6cccd1f1%3A0xac8742c22adac49d!2smehceb%20Market!5e0!3m2!1str!2str!4v1602150257280!5m2!1str!2str"
+              width="100%" height="450" frameborder="0" style="border:0"></iframe>
+    </div>
+    <!-- Contact end -->
+
+
+  </div>
+
+  <style type="text/css">
+  .footer {
+    background: url("https://mehceb-market.github.io/assets/img/footer.png") repeat center;
+    border-radius: 0px 0px 0px 0px;
+    width: 100%;
+    height: auto;
+    display: block;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #A9A9A9;
+    background-color: #01a04c;
+    font-size: 12px;
+    padding: 1em;
+  }
+  .footer_box {
+    width: 100%;
+    height: 75%;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-radius: 2px;
+    background-color: #fff;
+  }
+  </style>
+
+  <div class="footer">
+    <div class="container">
+      <div class="footer_box">
+
+        <div class="row visible-lg visible-md">
+          <div class="text-center">
+            <div class="col-md-6 col-sm-6 col-xs-6">
+              <i class="fa-2x fa fa-phone-square" aria-hidden="true" style="color:black"></i>
+              <h4>TELEFON</h4>
+              <h4>
+                <a href="tel:05449448443">
+                  <b class="mehceb-market_color_1">
+                    05449448443
+                  </b>
+                </a>
+              </h4>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6">
+              <i class="fa-2x fa fa-map-marker" aria-hidden="true" style="color:black"></i>
+              <h4>ADRES</h4>
+              <h4>
+                <b class="mehceb-market_color_1">
+                  İBNİ SİNA MH. 400 CAD. ELİT SİT. C BLOK NO:78 | MEHCEB Market <br/> Şahinbey / Gaziantep
+                </b>
+              </h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="row visible-sm visible-xs">
+          <div class="text-center">
+            <div class="col-sm-12 col-xs-12">
+              <i class="fa-2x fa fa-phone-square" aria-hidden="true" style="color:black"></i>
+              <h4>TELEFON</h4>
+              <h4>
+                <a href="tel:05449448443">
+                  <b class="mehceb-market_color_1">
+                    05449448443
+                  </b>
+                </a>
+              </h4>
+            </div>
+            <div class="col-sm-12 col-xs-12">
+              <i class="fa-2x fa fa-map-marker" aria-hidden="true" style="color:black"></i>
+              <h4>ADRES</h4>
+              <h4>
+                <b class="mehceb-market_color_1">
+                  İBNİ SİNA MH. 400 CAD. ELİT SİT. C BLOK NO:78 | MEHCEB Market <br/> Şahinbey / Gaziantep
+                </b>
+              </h4>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Backtotop start -->
+  <!-- source : http://github.com/gdemir/backtotop -->
+  <link rel="stylesheet" type="text/css" href="https://mehceb-market.github.io/assets/css/backtotop.min.css" />
+  <a href="#" id="backtotop" title="Back to top"><i class="backtotop-logo backtotop-logo-light_angle"></i></a>
+  <script src="https://mehceb-market.github.io/assets/js/backtotop.min.js"></script>
+  <!-- Backtotop end -->
+
+  <a href="https://wa.me/905449448443" target="_blank"><div id="whatsapp-logo" style="bottom: 30px; left: 30px;"></div></a>
+
+</body>
+</html>
