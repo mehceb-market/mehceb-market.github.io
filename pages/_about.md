@@ -2,9 +2,9 @@
 
 ## Kuruluş
 
-2020 yılında kurulmuştur.
+2025 yılında kurulmuştur.
 
 
 ## Sektör
 
-Market, manav ve kırtasiye sektörlerinde değer katmaya devam ediyoruz.
+Market, manav ve şarküteri sektörlerinde değer katmaya devam ediyoruz.
