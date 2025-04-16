@@ -113,15 +113,6 @@
       $('pre code').each(function(i, e) { hljs.highlightBlock(e) });
 
     });
-
-    
-    var music_level = "mehceb";
-    $("#soundtrack").html(
-      "<audio controls='controls' hidden='true' loop='true' autoplay='autoplay'>" +
-      "<source src='https://mehceb-market.github.io/assets/music/" + music_level + ".mp3' type='audio/mp3' />" +
-      "</audio>"
-      );
-
     
   });
   </script>
@@ -206,8 +197,13 @@
     </div><!-- /.container-fluid -->
   </nav>
   <!-- Navbar end -->
+  
   <div id="soundtrack">
+    <audio controls='controls' hidden='true' loop='true' autoplay='autoplay'>
+    <source src='https://mehceb-market.github.io/assets/music/mehceb.mp3' type='audio/mp3' />
+    </audio>
   </div>
+  
   <div id="readme">
 
     <!-- Slide start -->
