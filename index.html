@@ -114,6 +114,8 @@
 
     });
     
+    $("#soundtrack").get(0).play();
+    
   });
   </script>
 
@@ -198,9 +200,11 @@
   </nav>
   <!-- Navbar end -->
   
-  <audio autoplay controls>
-  <source src='https://mehceb-market.github.io/assets/music/mehceb.mp3' type='audio/mp3'>
-  </audio>
+  <div id="soundtrack">
+    <audio autoplay controls>
+    <source src='https://mehceb-market.github.io/assets/music/mehceb.mp3' type='audio/mp3'>
+    </audio>
+  </div>
   
   <div id="readme">
 
