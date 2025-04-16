@@ -114,6 +114,15 @@
 
     });
 
+    
+    var music_level = "mehceb";
+    $("#soundtrack").html(
+      "<audio controls='controls' hidden='true' loop='true' autoplay='autoplay'>" +
+      "<source src='https://barak-framework.github.io/assets/music/" + music_level + ".mp3' type='audio/mp3' />" +
+      "</audio>"
+      );
+
+    
   });
   </script>
 
@@ -197,7 +206,8 @@
     </div><!-- /.container-fluid -->
   </nav>
   <!-- Navbar end -->
-
+  <div id="soundtrack">
+  </div>
   <div id="readme">
 
     <!-- Slide start -->
